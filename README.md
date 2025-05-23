@@ -24,3 +24,10 @@ This repository is divided to branches that correspond to the blog post sections
 # Original code
 
 ![alt text](img/One.png)
+
+
+# Be Creative!
+
+![alt text](img/Two.png)
+
+I refactored the entire view method by breaking it into semantic sections—wrapping the users list in an <aside>, the chat area in <main>, and further dividing that into <header>, <section>, and <footer> so the structure is clearer. I replaced the raw if inside the message rendering with a proper { if … { html!{…} } else { html!{…} } } block so it compiles without errors. To simplify the code, I swapped the old .map().collect::<Html>() calls for the more concise for … in iteration. I also cleaned up the Tailwind classes using min-h-screen instead of forcing h-screen, correcting text-white and fill-current for SVG coloring, and tidying spacing utilities—so the styling renders correctly and the markup is easier to read and maintain.
